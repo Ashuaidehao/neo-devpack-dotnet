@@ -34,6 +34,9 @@
 
   <PropertyGroup Condition="'$(SharedLibrary)' == true">
     <PackageId>Neo.Compiler.MSIL</PackageId>
+    <!---->
+    <!--<BuildOutputTargetFolder>tool</BuildOutputTargetFolder>-->
+
   </PropertyGroup>
 
   <ItemGroup>
@@ -43,7 +46,10 @@
     <PackageReference Include="Mono.Cecil" Version="0.11.3" />
     <PackageReference Include="Neo" Version="3.0.0-CI01222" />
   </ItemGroup>
-
+  <ItemGroup>
+    <!-- pack the props files -->
+    <Content Include="build\*" PackagePath="build\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Neo.SmartContract.Framework\Neo.SmartContract.Framework.csproj">
       <!--
