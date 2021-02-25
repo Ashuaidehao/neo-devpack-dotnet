@@ -19,6 +19,7 @@
     <Product>Neo.Compiler.MSIL</Product>
     <Description>Neo.Compiler.MSIL</Description>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
   </PropertyGroup>
 
   <!--
@@ -27,17 +28,23 @@
       `dotnet pack /p:SharedLibrary=true` to build .NET Standard 2.0 library package
   -->
 
+ 
   <PropertyGroup Condition="'$(SharedLibrary)' != true">
     <PackageId>Neo.Neon</PackageId>
     <PackAsTool>true</PackAsTool>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(BuildTool)' == true">
+    <PackageId>Neo.Compiler.Dev</PackageId>
+    <PackAsTool>true</PackAsTool>
+    <PackageOutputPath>./packages</PackageOutputPath>
+    <VersionSuffix>preview5-dev1</VersionSuffix>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(SharedLibrary)' == true">
     <PackageId>Neo.Compiler.MSIL</PackageId>
-    <!---->
-    <!--<BuildOutputTargetFolder>tool</BuildOutputTargetFolder>-->
-
   </PropertyGroup>
+
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
@@ -50,6 +57,8 @@
     <!-- pack the props files -->
     <Content Include="build\*" PackagePath="build\" />
   </ItemGroup>
+
+
   <ItemGroup>
     <ProjectReference Include="..\Neo.SmartContract.Framework\Neo.SmartContract.Framework.csproj">
       <!--
