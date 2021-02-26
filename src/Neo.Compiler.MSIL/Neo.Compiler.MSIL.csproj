@@ -35,7 +35,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(BuildTool)' == true">
-    <PackageId>Neo.Compiler.Dev</PackageId>
+    <PackageId>Neo3.Compiler.Dev</PackageId>
     <PackAsTool>true</PackAsTool>
     <PackageOutputPath>./packages</PackageOutputPath>
     <VersionSuffix>preview5-dev1</VersionSuffix>
