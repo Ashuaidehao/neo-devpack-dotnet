@@ -38,7 +38,7 @@
     <PackageId>Neo3.Compiler.Dev</PackageId>
     <PackAsTool>true</PackAsTool>
     <PackageOutputPath>./packages</PackageOutputPath>
-    <VersionSuffix>preview5-dev1</VersionSuffix>
+    <VersionSuffix>rc1</VersionSuffix>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(SharedLibrary)' == true">
