@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <Copyright>2015-2021 The Neo Project</Copyright>
     <AssemblyTitle>Neo.Compiler.CSharp</AssemblyTitle>
@@ -33,6 +32,21 @@
     <ProjectReference Include="..\Neo.SmartContract.Framework\Neo.SmartContract.Framework.csproj">
       <Aliases>scfx</Aliases>
     </ProjectReference>
+  </ItemGroup>
+
+
+  <PropertyGroup Condition="'$(BuildTool)' == true">
+    <PackageId>Neo3.Compiler.CSharp.Dev</PackageId>
+    <PackAsTool>true</PackAsTool>
+    <PackageOutputPath>./packages</PackageOutputPath>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <VersionSuffix>dev1</VersionSuffix>
+    <PackageIconUrl>https://neo.org/favicon-32x32.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- pack the props files -->
+    <Content Include="build\*" PackagePath="build\" />
   </ItemGroup>
 
 </Project>
