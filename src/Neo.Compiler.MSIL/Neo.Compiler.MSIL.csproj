@@ -32,7 +32,7 @@
         <PackageId>Neo3.Compiler.Dev</PackageId>
         <PackAsTool>true</PackAsTool>
         <PackageOutputPath>./packages</PackageOutputPath>
-        <VersionPrefix>3.1.0</VersionPrefix>
+        <VersionPrefix>3.1.1</VersionPrefix>
         <VersionSuffix></VersionSuffix>
     </PropertyGroup>
     <PropertyGroup Condition="'$(SharedLibrary)' == true">
