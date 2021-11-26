@@ -34,7 +34,7 @@
     <PackageId>Neo3.Compiler.CSharp.Dev</PackageId>
     <PackAsTool>true</PackAsTool>
     <PackageOutputPath>./packages</PackageOutputPath>
-    <VersionPrefix>3.0.3</VersionPrefix>
+    <VersionPrefix>3.1.0</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <PackageIconUrl>https://neo.org/favicon-32x32.png</PackageIconUrl>
   </PropertyGroup>
